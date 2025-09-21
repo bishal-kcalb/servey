@@ -4,16 +4,25 @@
     "slug": "survey",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "updates": {
+      "enabled": false
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+            "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your location to record where this survey response was collected.",
+        "NSMicrophoeDescription": "We use your microphone to record your response in our survey",
+        "NSCameraUsageDescription": "We use your camera to take picture of your and your house during the surver"
+
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,6 +33,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store", "expo-image-picker"
+    ]
   }
 }
